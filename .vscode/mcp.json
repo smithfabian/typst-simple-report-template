@@ -1,0 +1,19 @@
+{
+  "servers": {
+    "typstMcp": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-v",
+        "${workspaceFolder}:/workspace",
+        "ghcr.io/johannesbrandenburger/typst-mcp:latest"
+      ],
+      "env": {
+        "WORKSPACE": "/workspace"
+      }
+    }
+  }
+}
