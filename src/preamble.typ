@@ -43,6 +43,7 @@
 )
 
 
+
 #let appendix(paths) = {
   set heading(numbering: "A.1", supplement: [Appendix])
   counter(heading).update(0)
@@ -68,6 +69,8 @@
   }
   for path in paths {
     pagebreak()
-    include (path)
+    path
+    include ("../" + path)
   }
 }
+
