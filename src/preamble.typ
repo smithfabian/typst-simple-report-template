@@ -16,7 +16,7 @@
   participants-supplement: "Authors:",
   title-font: "New Computer Modern",
   font: "New Computer Modern",
-  font-size: 13pt,
+  font-size: 12pt,
   font-weight: 400,
   math-font: "New Computer Modern Math",
   math-weight: 400,
@@ -41,8 +41,6 @@
   f-r: [],
   f-c: chic-page-number(),
 )
-
-
 
 #let appendix(paths) = {
   set heading(numbering: "A.1", supplement: [Appendix])
@@ -70,7 +68,7 @@
   for path in paths {
     pagebreak()
     path
-    include ("../" + path)
+    include (path)
   }
 }
 

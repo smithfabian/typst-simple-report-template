@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open File",
+      "type": "shell",
+      "command": "code",
+      "args": ["${workspaceFolder}/main.typ"],
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Open and Preview",
+      "type": "shell",
+      "command": "code",
+      "args": [
+        "--command",
+        "typst-preview.preview"
+      ],
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "dependsOn": ["Open File"],
+      "presentation": {
+        "reveal": "silent",
+      },
+      "problemMatcher": []
+    }
+  ]
+}
